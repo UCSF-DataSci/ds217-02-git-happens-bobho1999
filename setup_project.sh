@@ -20,7 +20,7 @@ cat > src/data_analysis.py << 'EOF'
 TODO
 EOF
 
-echo "Setting up data_analysis_functions/py"
+echo "Setting up data_analysis_functions.py"
 cat > src/data_analysis_functions.py << 'EOF'
 TODO
 EOF
