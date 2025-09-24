@@ -13,6 +13,13 @@ EOF
 echo "Setting up student.csv"
 cat > data/students.csv << 'EOF'
 name,age,grade,subject
+Alice,21,80,Math
+Bob,25,95,Math
+Charlie,27,92,History
+Daisy,23,85,History
+Ethan,24,80,Math
+Fiona,22,90,Physics
+Greg,20,83,Physics
 EOF
 
 echo "Setting up data_analysis.py"
