@@ -26,3 +26,5 @@ TODO
 EOF
 
 chmod +x setup_project.sh
+
+echo "Setup complete!"
