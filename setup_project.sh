@@ -11,7 +11,7 @@ cat > .gitignore << 'EOF'
 EOF
 
 echo "Setting up student.csv"
-cat > data/student.csv << 'EOF'
+cat > data/students.csv << 'EOF'
 name,age,grade,subject
 EOF
 
