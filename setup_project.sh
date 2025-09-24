@@ -10,6 +10,7 @@ cat > .gitignore << 'EOF'
 EOF
 
 cat > data/student.csv << 'EOF'
+name,age,grade,subject
 EOF
 
 cat > src/data_analysis.py << 'EOF'
