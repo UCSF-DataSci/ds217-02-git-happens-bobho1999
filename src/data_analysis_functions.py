@@ -31,6 +31,8 @@ def load_csv(filename:str): # Load CSV data (same technique as basic script)
 def analyze_data(students:list):
     stats = {}
 
+    stats["total count"] = len(students)
+
     # Calculate highest grade using max()
     highest_grade = max([s["grade"] for s in students])
     stats["highest grade"] = highest_grade
@@ -43,12 +45,13 @@ def analyze_data(students:list):
     stats["average"] = sum([s["grade"] for s in students])/len(students)
     
     # Count the number of studnets for each subject
+    stats["subject count"] = {}
     for s in students:
         subject = s["subject"]
-        if subject in stats:
-            stats[subject] += 1
+        if subject in stats["subject count"]:
+            stats["subject count"][subject] += 1
         else:
-            stats[subject] = 1
+            stats["subject count"][subject] = 1
     
     # Get grade distribution
     grades = [s["grade"] for s in students]
@@ -60,13 +63,13 @@ def analyze_data(students:list):
 def analyze_grade_distribution(grades:list): 
     distribution = {"A":0, "B": 0, "C":0, "D": 0, "F":0}
     for g in grades:
-        if g > 90:
+        if g >= 90:
             distribution["A"] += 1
-        elif g >80:
+        elif g >= 80:
             distribution["B"] += 1
-        elif g >70:
+        elif g >= 70:
             distribution["C"] += 1
-        elif g >60:
+        elif g >= 60:
             distribution["D"] += 1
         else:
             distribution["F"] += 1
@@ -74,13 +77,22 @@ def analyze_grade_distribution(grades:list):
     return distribution
 
 def save_results(results:dict, filename:str): # Save detailed report
-    pass
+    with open(filename, 'w') as file:
+        file.write(f"This is a detailed analysis report for the class:\n")
+        file.write(f"- Total number of students: {results["total count"]}\n")
+        file.write(f"- Class average: {results["average"]:.1f}\n")
+        file.write(f"- Subject counts:\n")
+        for i in results["subject count"]:
+            file.write(f"   - Number of {i} students: {results["subject count"].get(i,0)}\n")
+        file.write(f"- Grade distribution with percentages:\n")
+        for i in results["grade distribution"]:
+            file.write(f"   - {i}: {results["grade distribution"].get(i,0)} ({(results["grade distribution"].get(i,0)/results.get("total count"))*100:.1f}%)\n")
+
 
 def main(): # Orchestrate the analysis using all functions
     data = load_data("data/students.csv")
     stats = analyze_data(data)
-    print(stats)
-
+    save_results(stats, "output/analysis_report.txt")
 
 if __name__ == "__main__":
     main()
