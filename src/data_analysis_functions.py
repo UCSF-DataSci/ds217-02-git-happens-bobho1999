@@ -79,14 +79,14 @@ def analyze_grade_distribution(grades:list):
 def save_results(results:dict, filename:str): # Save detailed report
     with open(filename, 'w') as file:
         file.write(f"Detailed Analysis Result:\n")
-        file.write(f"- Total number of students: {results.get("total count",0)}\n")
-        file.write(f"- Class average: {results.get("average",0):.1f}\n")
+        file.write(f"- Total number of students: {results.get('total count',0)}\n")
+        file.write(f"- Class average: {results.get('average',0):.1f}\n")
         file.write(f"- Subject counts:\n")
-        for i in results.get("subject count", None):
-            file.write(f"   - Number of {i} students: {results.get("subject count", None).get(i,0)}\n")
+        for i in results.get('subject count', None):
+            file.write(f"   - Number of {i} students: {results.get('subject count', None).get(i,0)}\n")
         file.write(f"- Grade distribution with percentages:\n")
-        for i in results.get("grade distribution", None):
-            file.write(f"   - {i}: {results.get("grade distribution", None).get(i,0)} ({(results.get("grade distribution", None).get(i,0)/results.get("total count"))*100:.1f}%)\n")
+        for i in results.get('grade distribution', None):
+            file.write(f"   - {i}: {results.get('grade distribution', None).get(i,0)} ({(results.get('grade distribution', None).get(i,0)/results.get('total count'))*100:.1f}%)\n")
 
 
 def main(): # Orchestrate the analysis using all functions
