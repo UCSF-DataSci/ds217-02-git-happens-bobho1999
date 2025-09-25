@@ -24,12 +24,12 @@ EOF
 
 echo "Setting up data_analysis.py"
 cat > src/data_analysis.py << 'EOF'
-TODO
+#TODO
 EOF
 
 echo "Setting up data_analysis_functions.py"
 cat > src/data_analysis_functions.py << 'EOF'
-TODO
+#TODO
 EOF
 
 chmod +x setup_project.sh
