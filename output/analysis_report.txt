@@ -1,4 +1,13 @@
-This is a basic analysis report for the class:
-- Number of student: 7
+This is a detailed analysis report for the class:
+- Total number of students: 7
 - Class average: 86.4
-- Number of Math student: 3
+- Subject counts:
+   - Number of Math students: 3
+   - Number of History students: 2
+   - Number of Physics students: 2
+- Grade distribution with percentages:
+   - A: 3 (42.9%)
+   - B: 4 (57.1%)
+   - C: 0 (0.0%)
+   - D: 0 (0.0%)
+   - F: 0 (0.0%)
