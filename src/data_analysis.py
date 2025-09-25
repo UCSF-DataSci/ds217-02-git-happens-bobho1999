@@ -42,7 +42,7 @@ def count_math_students(students):
 
 # Create formatted report string
 def generate_report(total, average, math_count):
-    report = ["This is a basic analysis report for the class:"]
+    report = ["Basic Analysis Results:"]
     report.append(f"- Number of student: {total}")
     report.append(f"- Class average: {average:.1f}")
     report.append(f"- Number of Math student: {math_count}")

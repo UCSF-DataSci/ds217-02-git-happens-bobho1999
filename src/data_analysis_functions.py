@@ -78,7 +78,7 @@ def analyze_grade_distribution(grades:list):
 
 def save_results(results:dict, filename:str): # Save detailed report
     with open(filename, 'w') as file:
-        file.write(f"This is a detailed analysis report for the class:\n")
+        file.write(f"Detailed Analysis Result:\n")
         file.write(f"- Total number of students: {results["total count"]}\n")
         file.write(f"- Class average: {results["average"]:.1f}\n")
         file.write(f"- Subject counts:\n")
