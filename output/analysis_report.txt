@@ -1,0 +1,4 @@
+This is a basic analysis report for the class:
+- Number of student: 7
+- Class average: 86.4
+- Number of Math student: 3
