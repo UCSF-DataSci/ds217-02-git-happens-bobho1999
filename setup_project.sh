@@ -6,10 +6,12 @@ mkdir -p src data output
 echo "Directories created"
 
 # Create files using "here-documents"
+# Set up .gitignore
 echo "Setting up .gitignore"
 cat > .gitignore << 'EOF'
 EOF
 
+# Set up student csv with data
 echo "Setting up student.csv"
 cat > data/students.csv << 'EOF'
 name,age,grade,subject
@@ -22,6 +24,7 @@ Fiona,22,90,Physics
 Greg,20,83,Physics
 EOF
 
+# Set up two python scripts
 echo "Setting up data_analysis.py"
 cat > src/data_analysis.py << 'EOF'
 #TODO
