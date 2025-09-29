@@ -1,7 +1,7 @@
 # TODO
 
 # Read CSV and return list of student data
-def load_students(filename):
+def load_students(filename:str):
     with open(filename, 'r') as file:
         content = file.readlines()[1:]
 
@@ -17,7 +17,7 @@ def load_students(filename):
     return students
 
 # Calculate and return average
-def calculate_average_grade(students): 
+def calculate_average_grade(students:list[dict]): 
     sum = 0
 
     #iterate through student to get their score and add to sum
@@ -31,7 +31,7 @@ def calculate_average_grade(students):
 
 
 # Count students in Math
-def count_math_students(students):
+def count_math_students(students:list[dict]):
     count = 0
     for s in students:
         if s["subject"] == "Math":
@@ -41,7 +41,7 @@ def count_math_students(students):
 
 
 # Create formatted report string
-def generate_report(total, average, math_count):
+def generate_report(total:int, average:float, math_count:int):
     report = ["Basic Analysis Results:"]
     report.append(f"- Number of student: {total}")
     report.append(f"- Class average: {average:.1f}")
@@ -49,7 +49,7 @@ def generate_report(total, average, math_count):
     return report
 
 # Write report to file
-def save_report(report, filename):
+def save_report(report:list[str], filename:str):
     with open(filename, 'w') as file:
         for r in report:
             file.write(f"{r}\n")
@@ -58,7 +58,7 @@ def save_report(report, filename):
 # Perform the analysis
 def main():
     contents = load_students("data/students.csv")
-    print(contents)
+    # print(contents)
     avg = calculate_average_grade(contents)
     math_count = count_math_students(contents)
     total = len(contents)
