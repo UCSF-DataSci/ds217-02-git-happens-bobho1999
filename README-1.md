@@ -5,7 +5,18 @@ This project demonstrates integration of Git workflows, CLI automation, and Pyth
 
 ## Project Structure
 datasci-week02-integration/  
-├── README.md ├── .gitignore ├── requirements.txt ├── setup_project.sh ├── src/ │ ├── data_analysis.py │ └── data_analysis_functions.py ├── data/ │ ├── students.csv │ └── courses.json └── output/ └── analysis_report.txt
+├── README.md  
+├── .gitignore  
+├── requirements.txt  
+├── setup_project.sh   
+├── src/  
+│ ├── data_analysis.py  
+│ └── data_analysis_functions.py  
+├── data/  
+│ ├── students.csv  
+│ └── courses.json  
+└── output/  
+│ └── analysis_report.txt  
 
 
 ## Features
