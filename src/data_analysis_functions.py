@@ -80,6 +80,8 @@ def save_results(results:dict, filename:str): # Save detailed report
     with open(filename, 'w') as file:
         file.write(f"Detailed Analysis Result:\n")
         file.write(f"- Total number of students: {results.get('total count',0)}\n")
+        file.write(f"- Highest grade: {results.get('highest grade',0):.1f}\n")
+        file.write(f"- Lowest grade: {results.get('lowest grade',0):.1f}\n")
         file.write(f"- Class average: {results.get('average',0):.1f}\n")
         file.write(f"- Subject counts:\n")
         for i in results.get('subject count', None):

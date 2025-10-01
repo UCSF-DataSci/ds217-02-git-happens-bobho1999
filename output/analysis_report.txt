@@ -1,5 +1,7 @@
 Detailed Analysis Result:
 - Total number of students: 7
+- Highest grade: 95.0
+- Lowest grade: 80.0
 - Class average: 86.4
 - Subject counts:
    - Number of Math students: 3
