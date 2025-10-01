@@ -1,15 +1,15 @@
 Detailed Analysis Result:
-- Total number of students: 7
+- Total number of students: 8
 - Highest grade: 95.0
 - Lowest grade: 80.0
-- Class average: 86.4
+- Class average: 86.9
 - Subject counts:
-   - Number of Math students: 3
+   - Number of Math students: 4
    - Number of History students: 2
    - Number of Physics students: 2
 - Grade distribution with percentages:
-   - A: 3 (42.9%)
-   - B: 4 (57.1%)
+   - A: 4 (50.0%)
+   - B: 4 (50.0%)
    - C: 0 (0.0%)
    - D: 0 (0.0%)
    - F: 0 (0.0%)
