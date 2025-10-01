@@ -22,6 +22,7 @@ Daisy,23,85,History
 Ethan,24,80,Math
 Fiona,22,90,Physics
 Greg,20,83,Physics
+Helena,22,90,Math
 EOF
 
 # Set up two python scripts
